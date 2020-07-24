@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5BE1A9C-A278-4681-A461-4BC3F48E7377}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>arnis_hospital</RootNamespace>
+    <AssemblyName>arnis-hospital</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Screenshot_2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db.cs" />
+    <Compile Include="frm_ana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ana.Designer.cs">
+      <DependentUpon>frm_ana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_doktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_doktor.Designer.cs">
+      <DependentUpon>frm_doktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_doktor_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_doktor_giris.Designer.cs">
+      <DependentUpon>frm_doktor_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_doktor_kayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_doktor_kayit.Designer.cs">
+      <DependentUpon>frm_doktor_kayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_giris.Designer.cs">
+      <DependentUpon>frm_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hakkimda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_hakkimda.Designer.cs">
+      <DependentUpon>frm_hakkimda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hasta_kayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_hasta_kayit.Designer.cs">
+      <DependentUpon>frm_hasta_kayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_klinkler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_klinkler.Designer.cs">
+      <DependentUpon>frm_klinkler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kullanicilar.Designer.cs">
+      <DependentUpon>frm_kullanicilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_randevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_randevu.Designer.cs">
+      <DependentUpon>frm_randevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_ana.resx">
+      <DependentUpon>frm_ana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_doktor.resx">
+      <DependentUpon>frm_doktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_doktor_giris.resx">
+      <DependentUpon>frm_doktor_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_doktor_kayit.resx">
+      <DependentUpon>frm_doktor_kayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_giris.resx">
+      <DependentUpon>frm_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_hakkimda.resx">
+      <DependentUpon>frm_hakkimda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_hasta_kayit.resx">
+      <DependentUpon>frm_hasta_kayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_klinkler.resx">
+      <DependentUpon>frm_klinkler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kullanicilar.resx">
+      <DependentUpon>frm_kullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_randevu.resx">
+      <DependentUpon>frm_randevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daa.jpg" />
+    <Content Include="Screenshot_2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
